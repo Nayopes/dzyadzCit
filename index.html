@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-quiz.css">
+    <!-- <link rel="stylesheet" href="css/style-colors.css"> -->
+
+    <link rel="icon" type="image/x-icon" href="./favicon.jpeg">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <title>ՁյաձԾիտ28</title>
+</head>
+
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .giftBg #main1 {
+            height: 555px;
+            width: 100%;
+            max-width: 792px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-image: url('images/img.png');
+            background-size: cover;
+        }
+        .giftBg .inputs {
+            display: flex;
+            box-shadow: 0px 0px 10px 10px grey;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            width: 1000px;
+            margin-left: 183px;
+            margin-top: 50px;
+        }
+        .giftBg div img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+        .giftBg .inp {
+            height: 30px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+            margin: 0px;
+            margin-left: 25px;
+            outline: none;
+            text-align: center;
+        }
+    
+        .giftBg .btn,
+        .giftBg .ref {
+            border: 1px solid black;
+            border-radius: 5px;
+            background: cyan;
+            font-size: 20px;
+            height: 30px;
+            width: 120px;
+            margin: 0px;
+            margin-left: 25px;
+            outline: none;
+        }
+    
+        .giftBg .ref {
+            margin-left: 10px;
+        }
+    
+        .giftBg .ref:hover {
+            background: lime;
+        }
+    
+        .giftBg .btn:hover {
+            background: lime;
+        }
+    
+        .giftBg {
+           
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            padding: 0 20px;
+        }
+        @media (max-width: 998px) {
+            .giftBg #main1 > div {
+                width: 25%!important;
+                height: auto!important;
+            }
+            .giftBg #main1 {
+                height: auto;
+            }
+        }
+    </style>
+
+<section class="pageContainerOne" id="tic-tac-toe">
+    <div class="mainTic">
+      <h1 class="gameTitle">Սոնայի փուլ</h1> 
+        <div id="gridContainer">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button> 
+
+            <button class="popup" id="popup">
+            <h3>BIG WIN!</h3>
+        </button>
+        </div>
+   
+    </div>
+        <div class="newGameBtn">
+            <button id="newGame">Կրկին Փորձեք</button>
+            <button id="nextGameTic">Հաջորդը</button>
+
+        </div>
+    </div>
+</section>
+
+<section class="pageContainerTwo" id="memoryGame">
+    <h1 class="gameTitle two">Գոգայի փուլ</h1> 
+    <div class="main" id="gameTwoMain">
+        <div class="game"></div>
+        <div class="text">
+            <img src="./images/lineOne.png" alt="" id="lineOne">
+            <div class="animtaion-text">
+                <h4 id="gameTwo-h4"></h4>
+            </div>
+            <img src="./images/lineTwo.png" alt="" id="lineTwo">
+        </div>
+    </div>   
+    <div class="gameTwoButton">
+        <button  id="nextGameMem">Հաջորդը</button>
+    </div>
+</section> 
+
+<section id="quiz" class="pageContainerTree" style="background-image: url('images/bg_thirStage.png')">
+    <div class="thirdStage-inner" >
+		<div class="thirdStage">
+			<h1>Կառայի փուլ</h1>
+			<p id='question'></p>
+			<div id='main'>
+				<div id="ch"></div>
+			</div>
+		</div>
+    
+	</div>
+    <div class="gameTwoButton">
+        <button  id="nextGameQuiz">Հաջորդը</button>
+    </div>
+</section>
+
+<section id="colors" lass="pageContainerTwo">
+    <div class="giftBg" id="giftBg">
+        <div id="main1">
+    
+        </div>
+    </div>
+</section>
+
+<script src="js/dom.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script-quiz.js"></script>
+<script src="js/script-colors.js"></script>
+
+</body>
+
+</html>
