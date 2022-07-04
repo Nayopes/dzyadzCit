@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-tic.css">
+    <link rel="stylesheet" href="css/style-memo.css">
     <link rel="stylesheet" href="css/style-quiz.css">
     <!-- <link rel="stylesheet" href="css/style-colors.css"> -->
 
-    <link rel="icon" type="image/x-icon" href="./favicon.jpeg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
     <script
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -122,9 +122,16 @@
             <button class="box"></button> 
 
             <button class="popup" id="popup">
-            <h3>BIG WIN!</h3>
+            <!-- <h3>BIG WIN!</h3> -->
         </button>
         </div>
+        <section class="repeatGame" id="repeatGame">
+          
+            <div class="repeatGameContainer">
+                <span>Փորձե՛ք կրկին ու գրանցե՛ք ձեր՝ արդեն 28 տարվա միասնական  կյանքի ևս մեկ հաղթանակը</span>
+            </div>
+         
+        </section>
    
     </div>
         <div class="newGameBtn">
@@ -139,6 +146,10 @@
     <h1 class="gameTitle two">Գոգայի փուլ</h1> 
     <div class="main" id="gameTwoMain">
         <div class="game"></div>
+       <div id="slideText">
+        <div id="leftVector">
+            <img src="./images/leftVector.png" alt="vector" />
+        </div>
         <div class="text">
             <img src="./images/lineOne.png" alt="" id="lineOne">
             <div class="animtaion-text">
@@ -146,6 +157,10 @@
             </div>
             <img src="./images/lineTwo.png" alt="" id="lineTwo">
         </div>
+        <div id="rightVector">
+            <img src="./images/rightVector.png" alt="vector" />
+        </div>
+       </div>
     </div>   
     <div class="gameTwoButton">
         <button  id="nextGameMem">Հաջորդը</button>
@@ -174,12 +189,15 @@
     
         </div>
     </div>
+    <button id="pdf"><a target="_blank" href="http://xn--28-ccd4boqb4a8g.xn--y9a3aq/final.pdf" download="pdf">
+       download pdf
+      </a></button>
 </section>
 
-<script src="js/dom.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script-tic.js"></script>
+<script src="js/script-memo.js"></script>
 <script src="js/script-quiz.js"></script>
-<script src="js/script-colors.js"></script>
+<script src="js/script-puzzle.js"></script>
 
 </body>
 

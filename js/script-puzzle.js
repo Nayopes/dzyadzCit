@@ -12,16 +12,23 @@ $('#nextGameQuiz').on('click' , function(){
     for (let i = 0; i < wCount * hCount; i++) {
         let a = createBox(bHeight, bWidth , i);
         mainDiv.appendChild(a);
+        a.setAttribute('class', 'puzzleItem')
         a.onmouseout = function () {
             a.style.background = setRandomColor(this);
+            let puzzleItem = document.getElementsByClassName('puzzleItem');
+            let arr = Array.from(puzzleItem)
+
+if(arr.every(el=>el.style.visibility === 'hidden')){
+    $('#pdf').css('display' , 'block')
+}
         }
     }
     document.getElementById('giftBg').appendChild(mainDiv);
 
 
-document.querySelector(".ref").onclick = function () {
-    location.reload();
-}
+// document.querySelector(".ref").onclick = function () {
+//     location.reload();
+// }
 
 function createBox(h, w , img) {
     let div = document.createElement("div");
@@ -40,4 +47,6 @@ function setRandomColor(a) {
     return a.style.visibility = "hidden";
 }
 })
+
+
    

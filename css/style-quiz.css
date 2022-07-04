@@ -42,7 +42,7 @@
 	width: 100%;
 }
 .thirdStage-inner{
-	height: 100vh;
+	height: calc(100vh - 86px );
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -109,12 +109,27 @@
 }
 #nextGameQuiz{
     display: none;
+	background: #DF8775;
+    border-radius: 50px;
+    border: none;
+    font-family: fontOne;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 0;
+    padding: 16px;
 }
 #colors{
     background-image: url("../images/giftbg.png");
     align-items: center;
     justify-content: center;
     display: none;
+}
+.gameTwoButton {
+    margin-bottom: 30px;
 }
 @media  (max-width: 1024px){
 	.thirdStage-inner h1{

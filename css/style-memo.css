@@ -15,7 +15,7 @@ body{
     box-sizing: border-box;
 }
 .pageContainerTwo{
-    min-height: calc(100vh - 130px);
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body{
     background-image: url(../images/back3.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 130px;
+    padding: 130px 0;
 }
 .pageContainerTree{
     min-height: calc(100vh - 130px);
@@ -136,7 +136,22 @@ div#gameTwoMain {
 #nextGameMem{
     display: none;
 }
-
+#slideText{
+    display: flex;
+    align-items: center;
+    max-width: 740px;
+}
+.animtaion-text{
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+#leftVector{
+    margin-right: 20px;
+}
+#pdf{
+    display: none;
+}
 @media (max-width:1440px){
     div#gameTwoMain {
         max-width: 1330px;
@@ -205,15 +220,21 @@ div#gameTwoMain {
     .main .game {
         width: 75% !important;
         margin-left: 0;     
-        min-height: 190px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 158px;
     }
 
     .gameTwoButton button {
         font-size: 24px;
         padding: 16px 24px;
     }
+    div#gameTwoMain{
+        gap: 56px;
+    }
 }
-
 @media (max-width: 400px){
     h1.gameTitle.two{
         font-size: 56px;

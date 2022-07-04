@@ -113,6 +113,46 @@ h3{
 #memoryGame{
     display: none;
 }
+
+.repeatGame{
+    /* min-height: 100vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./back\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.repeatGameContainer{
+    background-image: url(../images/repeatContent.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 500px;
+    background-position: center;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+}
+.repeatGameContainer span{
+    max-width: 474px;
+    margin: 0 auto;
+    font-family: fontTwo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: #014C51;
+    padding-left: 52px;
+
+}
+#repeatGame{
+    display: none;
+}
 /* @media (max-width: 1440px){
     #gridContainer {
         width: 500px;

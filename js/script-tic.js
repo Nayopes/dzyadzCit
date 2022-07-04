@@ -4,11 +4,8 @@ const container = document.getElementById('gridContainer');
 const popup = document.getElementById("popup");
 const newGame = document.getElementById("newGame");
 let isPlayer = true;
-const x = 'X';
-const o = 'O';
-
-// const x = "<img src='./X.png'>";
-// const o = "<img src='./O.png'>";
+const x = '<img src="./images/X.png">';
+const o = '<img src="./images/O.png">';
 
 
 let numberOfbox = 3;;
@@ -178,7 +175,8 @@ for (i = 0; i < boxes.length; i++) {
                     else if (arr[4].innerHTML === x && arr[2].innerHTML === '') {
                         arr[2].innerHTML = o
                     } else if (arr.every(el => el.innerHTML !== '')) {
-                        alert('Վատ չի! ☺');
+                        $('#repeatGame').css('display' , 'block')
+                        $('#gridContainer').css('display' , 'none')
                     }
                     else {
                         filtered[random].innerHTML = o;
@@ -214,7 +212,7 @@ const checkHorizontalWin = () => {
 
             return false
         } else if (newHorizontal.every(el => el.innerHTML === o)) {
-            // alert('LOOSER!');
+            $('#repeatGame').css('display' , 'block')
             return changeColor(newHorizontal);
         }
     }
@@ -229,7 +227,7 @@ const checkVerticalWin = () => {
             arr.push(verticalArray[i]);
         }
         if (arr.every(el => el.innerHTML === x)) {
-            popup.style.display = 'block';
+            // popup.style.display = 'block';
             for(let i=0;i<arr.length ; i++){
                 arr[i].innerHTML = '<img src="./images/heart.png">'
             }
@@ -238,7 +236,9 @@ const checkVerticalWin = () => {
             // changeColor(arr);
             return false
         } else if (arr.every(el => el.innerHTML === o)) {
-            // alert('LOOSER!');
+            $('#repeatGame').css('display' , 'block')
+            $('#gridContainer').css('display' , 'none')
+
             changeColor(arr);
         }
     }
@@ -253,7 +253,7 @@ const checkLeftDiagonal = () => {
     }
     if (arr.every(el => el.innerHTML === x)) {
 
-        popup.style.display = 'block';
+        // popup.style.display = 'block';
         for(let i=0;i<arr.length ; i++){
             arr[i].innerHTML = '<img src="./images/heart.png">'
         }
@@ -262,7 +262,9 @@ const checkLeftDiagonal = () => {
         // changeColor(arr);
         return false
     } else if (arr.every(el => el.innerHTML === o)) {
-        // alert('LOOSER!');
+        $('#repeatGame').css('display' , 'block')
+        $('#gridContainer').css('display' , 'none')
+
         changeColor(arr);
     }
 }
@@ -275,7 +277,7 @@ const checkRightDiagonal = () => {
         arr.push(rightDiagonalArray[i]);
     }
     if (arr.every(el => el.innerHTML === x)) {
-        popup.style.display = 'block';
+        // popup.style.display = 'block';
         for(let i=0;i<arr.length ; i++){
             arr[i].innerHTML = '<img src="./images/heart.png">'
         }
@@ -284,7 +286,9 @@ const checkRightDiagonal = () => {
         // changeColor(arr);
         return false
     } else if (arr.every(el => el.innerHTML === o)) {
-        // alert('LOOSER!');
+        $('#repeatGame').css('display' , 'block')
+        $('#gridContainer').css('display' , 'none')
+
         changeColor(arr);
     }
 }
@@ -301,4 +305,6 @@ newGame.onclick = () => {
         popup.style.display = 'none';
         boxes[i].style.color = '#000'
     }
+    $('#repeatGame').css('display' , 'none')
+    $('#gridContainer').css('display' , 'block')
 }
