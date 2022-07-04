@@ -213,6 +213,7 @@ const checkHorizontalWin = () => {
             return false
         } else if (newHorizontal.every(el => el.innerHTML === o)) {
             $('#repeatGame').css('display' , 'block')
+            $('#gridContainer').css('display' , 'none')
             return changeColor(newHorizontal);
         }
     }
@@ -306,5 +307,5 @@ newGame.onclick = () => {
         boxes[i].style.color = '#000'
     }
     $('#repeatGame').css('display' , 'none')
-    $('#gridContainer').css('display' , 'block')
+    $('#gridContainer').css('display','grid')
 }
