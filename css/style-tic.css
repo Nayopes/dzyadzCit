@@ -18,7 +18,9 @@
 
 }
 
-
+#tic-tac-toe{
+    display: none;
+}
 section.pageContainerOne {
     min-height: 100vh;
     width: 100%;
@@ -48,6 +50,8 @@ section.pageContainerOne {
     justify-content: center;
     align-items: center;
     max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
 
 }
 
@@ -136,6 +140,7 @@ h3{
     max-width: 900px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 }
 .repeatGameContainer span{
     max-width: 474px;

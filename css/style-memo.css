@@ -149,9 +149,6 @@ div#gameTwoMain {
 #leftVector{
     margin-right: 20px;
 }
-#pdf{
-    display: none;
-}
 @media (max-width:1440px){
     div#gameTwoMain {
         max-width: 1330px;

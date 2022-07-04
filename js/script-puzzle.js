@@ -19,7 +19,7 @@ $('#nextGameQuiz').on('click' , function(){
             let arr = Array.from(puzzleItem)
 
 if(arr.every(el=>el.style.visibility === 'hidden')){
-    $('#pdf').css('display' , 'block')
+    $('#pdf').css('visibility' , 'visible')
 }
         }
     }

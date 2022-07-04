@@ -14,7 +14,26 @@
 	font-family: Tahoma;
 	src: url('../fonts/fonter.am_tahoma/tahoma.ttf');
 }
-
+button#pdf {
+	background: #6DB6BF;
+	border-radius: 50px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding: 20px 30px;
+	outline: none;
+	border: none;
+	margin-bottom: 160px;
+	visibility: hidden;
+}
+button#pdf a {
+	color: #FFFFFF;
+	text-decoration: unset;
+	font-family: Anpuit;
+}
 .thirdStage-inner h1 {
 	width: fit-content;
 	margin: 0 auto 30px;
@@ -127,6 +146,8 @@
     align-items: center;
     justify-content: center;
     display: none;
+	flex-direction: column;
+    background-size: cover;
 }
 .gameTwoButton {
     margin-bottom: 30px;

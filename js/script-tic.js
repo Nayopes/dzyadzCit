@@ -1,4 +1,9 @@
 // TIC TAC TOE
+$('#mainPage-one-button-6').on('click',function(){
+    $('#mainPage-three').css('display' , 'none')
+    $('#tic-tac-toe').css('display','flex')
+})
+
 const boxes = document.getElementsByClassName('box');
 const container = document.getElementById('gridContainer');
 const popup = document.getElementById("popup");
@@ -35,7 +40,10 @@ for (i = 0; i < boxes.length; i++) {
                     let filtered = arr.filter(el => el.innerHTML === '');
                     random = randomItem(filtered.length);
                     // horizontal win
-                    if (arr[0].innerHTML === o && arr[1].innerHTML === o && arr[2].innerHTML === '') {
+                    if( document.getElementById('nextGameTic').style.display === 'block'){
+                        return;
+                    }
+                    else if (arr[0].innerHTML === o && arr[1].innerHTML === o && arr[2].innerHTML === '') {
                         arr[2].innerHTML = o
                     } else if (arr[1].innerHTML === o && arr[2].innerHTML === o && arr[0].innerHTML === '') {
                         arr[0].innerHTML = o
@@ -309,3 +317,20 @@ newGame.onclick = () => {
     $('#repeatGame').css('display' , 'none')
     $('#gridContainer').css('display','grid')
 }
+
+$("button#mainPage-one-button-2").on('click', function(){
+    $("#mainPage-one").hide();
+    $("#mainPage-two").show();
+});
+$("button#mainPage-one-button-3").on('click', function(){
+    $("#mainPage-one").show();
+    $("#mainPage-two").hide();
+});
+$("button#mainPage-one-button-4").on('click', function(){
+    $("#mainPage-two").hide();
+    $("#mainPage-three").show();
+});
+$("button#mainPage-one-button-5").on('click', function(){
+    $("#mainPage-three").hide();
+    $("#mainPage-two").show();
+});
